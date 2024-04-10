@@ -9,6 +9,10 @@
 				console.log('Received message from iframe:', e.source[0].test());
 				
 			}, false);
+
+			if(parent.test) {
+				parent.test();
+			}
 		}
 	</script>
 </head>
