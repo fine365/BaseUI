@@ -5,14 +5,15 @@
 	<meta charset="utf-8" />
 	<script>
 		window.onload = function() {
+			if(parent.test) {
+				parent.test();
+			}
 			window.addEventListener('message', function(e) {
 				console.log('Received message from iframe:', e.source[0].test());
 				
 			}, false);
 
-			if(parent.test) {
-				parent.test();
-			}
+			
 		}
 	</script>
 </head>
