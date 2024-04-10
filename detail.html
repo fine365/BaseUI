@@ -5,7 +5,9 @@
 	<meta charset="utf-8" />
 	<script>
 		window.onload = function() {
-			parent.test();
+			window.addEventListener('message', function(e) {
+				console.log('Received message from iframe:', e.data);
+			}, false);
 		}
 	</script>
 </head>
